@@ -3,32 +3,37 @@
 \alias{convexhull}
 \docType{package}
 \title{
-  A short title line describing what the package does
+  Package to obtain the convex hull of a set of points.
 }
 \description{
-  A more detailed description of what the package does. A length
-  of about one to five lines is recommended.
+  This package implements the Jarvis March algorithm for obtaining the convex
+  hull of a given list of (x,y) co-ordinate pairs.
 }
 \details{
   This section should provide a more detailed overview of how to use the
   package, including the most important functions.
 }
 \author{
-Your Name, email optional.
+Robert Lambert: r.lambert1@lancaster.ac.uk
 
-Maintainer: Your Name <your@email.com>
-}
-\references{
-  This optional section can contain literature or other references for
-  background information.
-}
-\keyword{ package }
-\seealso{
-  Optional links to other man pages
-}
+\keyword{convexhull}
+
 \examples{
   \dontrun{
-     ## Optional simple examples of the most important functions
-     ## These can be in \dontrun{} and \donttest{} blocks.   
+     ## implementing the Jarvis march algorithm:
+     
+     # can take a list of vectors or data frame as input
+     
+     df = data.frame(x = rnorm(100,1,1), y = rnorm(100,2,5))
+     jarvis_march(df)
+     
+     # plotting the convex hull
+     
+     jarvis_plot(df)
+     
+     # determining if a point is in the convexhull
+     
+     in_hull(c(0,0), df)
+     
   }
 }
