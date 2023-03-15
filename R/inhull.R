@@ -14,9 +14,9 @@ in_hull = function(point, input){
   for (j in 1:length(jm_output)){
     if (point[1] == jm_output[[j]][[1]][1]){
       if (point[2] == jm_output[[j]][[1]][2]){
-        return (TRUE)
+        print(paste0("(", point[1], ",", point[2], ") is in the convex hull"))
       }
     }
   }
-  return (FALSE)
+  print(paste0("(", point[1], ",", point[2], ") is not in the convex hull"))
 }
