@@ -1,4 +1,4 @@
-in_hull2 = function(point, input){
+in_hull = function(point, input){
   # function to determine if a point is in the convex hull
   
   # creating a plot to show where the point is in relation to the convex hull
