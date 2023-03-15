@@ -17,6 +17,8 @@ in_hull = function(point, input){
         print(paste0("(", point[1], ",", point[2], ") is in the convex hull"))
       }
     }
+    else{
+      print(paste0("(", point[1], ",", point[2], ") is not in the convex hull"))
+    }
   }
-  print(paste0("(", point[1], ",", point[2], ") is not in the convex hull"))
 }
